@@ -82,8 +82,8 @@ jobs:
       - name: change image tag
         run: |
           git --version
-          git config user.name "aorjoa"
-          git config user.email "root@aorjoa.link"
+          git config user.name "wytquant"
+          git config user.email "wittawas.kns@gmail.com"
           sed -i -E "s/ghcr.io\/wytquant\/devops-go-example.*$/ghcr.io\/wytquant\/devops-go-example:${GITHUB_SHA}/" kube-gitops/deployment.yml
           git add kube-gitops/deployment.yml
           git commit -m "🤖 change docker image version to ${GITHUB_SHA}"
