@@ -84,7 +84,7 @@ jobs:
           git --version
           git config user.name "aorjoa"
           git config user.email "root@aorjoa.link"
-          sed -i -E "s/ghcr.io\/aorjoa-training\/devops-go-example.*$/ghcr.io\/aorjoa-training\/devops-go-example:${GITHUB_SHA}/" kube-gitops/deployment.yml
+          sed -i -E "s/ghcr.io\/wytquant\/devops-go-example.*$/ghcr.io\/wytquant\/devops-go-example:${GITHUB_SHA}/" kube-gitops/deployment.yml
           git add kube-gitops/deployment.yml
           git commit -m "🤖 change docker image version to ${GITHUB_SHA}"
       - name: push changes
